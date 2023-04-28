@@ -2,14 +2,15 @@ package main
 
 import input as params
 import future.keywords
+import tag-rules.allowed_tags_values
 
 required_tags = { "Name", "Service", "Cluster", "Env", "OS" }
-allowed_tags_values = {
-    "Service": ["api", "qa-box"],
-    "Cluster": ["api", "qa-box"],
-    "Env": ["qa", "canary"],
-    "OS": ["linux", "windows"]
-}
+# allowed_tags_values = {
+#    "Service": ["api", "qa-box"],
+#    "Cluster": ["api", "qa-box"],
+#    "Env": ["qa", "canary"],
+#    "OS": ["linux", "windows"]
+# }
 
 # deny if instances for creation do not have complete required tags
 deny[msg] {
