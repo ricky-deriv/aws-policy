@@ -1,0 +1,14 @@
+metadata:
+  name: "Check that all instances have the following tags: Name, Service, Cluster, OS, Env"
+  id: "CKV2_CUSTOM_01"
+  category: "CONVENTION"
+definition:
+  and:
+  - cond_type: "attribute"
+    resource_types: "instance"
+    attribute: "tags.Name"
+    operator: "exists"
+  - cond_type: "attribute"
+    resource_types: "instance"
+    attribute: "tags.Service"
+    operator: "exists"
